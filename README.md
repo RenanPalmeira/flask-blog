@@ -1,6 +1,6 @@
 # Flask-Blog 
 
 Modules & *FrameWork's*:
-Flask
-Flask-Migrate
-Flask-SQLAlchemy
+* Flask
+* Flask-Migrate
+* Flask-SQLAlchemy
