@@ -1,0 +1,25 @@
+<div class="extra-pagination inner">
+    {{pagination}}
+</div>
+
+{% for post in blog.posts %}
+    <article class="{{post.post_class}}">
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            <p>{{post.content}} <a class="read-more" href="{{post.url}}">&raquo;</a></p>
+        </section>
+
+        <footer class="post-meta">
+            <img class="author-thumb" src="{{blog.author.image}}" alt="Author image" nopin="nopin" />
+            {{post.author}}
+            on 
+            <a href="/tag/getting-started/">Getting Started</a>
+            <time class="post-date" datetime="19 JANUARY 2015">19 JANUARY 2015</time>
+        </footer>
+    </article>
+{% endfor %}
+
+
+{{pagination}}

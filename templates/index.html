@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+<body class="{{body_class}}">
+
+    {% include 'default.html' %}
+
+    <footer class="site-footer clearfix">
+        <section class="copyright">
+            <a href="{{blog.url}}">{{blog.title}}</a> &copy; </section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
+    <script type="text/javascript" src="http://localhost:2368/public/jquery.js?v=9ac5c0aa98"></script>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.fitvids.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
+
+</body>
+</html>
