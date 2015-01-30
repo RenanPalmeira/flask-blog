@@ -1,0 +1,35 @@
+{% extends "base/layout_admin.html" %}
+{% block content %}
+	<div class="nav-ground">
+		<div class="nav">
+			<a href="#" class="item active">CONTENT</a>
+			<a href="#" class="item">NEW POST</a>
+			<a href="#" class="item">SETTINGS</a>
+			<a href="#" class="profile">{{blog.author}}</a>
+		</div>
+	</div>
+	<div class="list-post">
+
+		<div class="info">
+			ALL POSTS 
+		</div>
+		<div class="list-box">
+			<div id="post1" class="post-list-admin active" title="Edit this post">
+				<h3>Geroudo</h3>
+				<span class="date">03</span>
+			</div>
+			<div id="post1" class="post-list-admin">
+				<h3>Geroudo</h3>
+				<span class="date"></span>
+			</div>
+			<div id="post1" class="post-list-admin">
+				<h3>Geroudo</h3>
+				<span class="date"></span>
+			</div>
+			<div id="post1" class="post-list-admin">
+				<h3>Geroudo</h3>
+				<span class="date"></span>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template
 from core.db import db
-from core.routes import default, post
+from core.routes import default, post, admin
 from core.filters import Filters
 
 app = Flask(__name__)
@@ -13,6 +13,7 @@ Filters(app)
 
 app.register_blueprint(default.app)
 app.register_blueprint(post.app)
+app.register_blueprint(admin.app)
 
 if __name__ == "__main__":
 	app.debug = True

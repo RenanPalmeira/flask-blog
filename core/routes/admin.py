@@ -7,7 +7,7 @@ from flask import Blueprint, request, render_template, redirect, \
 from core.db import db
 from core.models import User, Blog, Post, Tag
 
-app = Blueprint('default', __name__, url_prefix='')
+app = Blueprint('admin', __name__, url_prefix='/admin')
 
 def session_info_blog():
 	response=Blog.query.filter_by(website=request.url_root,status=1).first()
@@ -39,7 +39,7 @@ def check_session_blog():
 def default():
 	response=session_info_blog()
 	post=Post.query.filter_by(blog_id=response['id_blog'],status=1).all()
-	return render_template("index.html",blog=response,posts=post)
+	return render_template("admin/index.html",blog=response,posts=post)
 
 @app.route("/sobre/")
 def sobre():
