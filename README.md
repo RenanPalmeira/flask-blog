@@ -8,5 +8,5 @@ Modules & *FrameWork's*:
 
 # Getting Started 
 
-1. `` python manage.py db init ``
-2. `` python manage.py db init ``
+1. `` python manage_flask.py db init ``
+2. `` python manage_flask.py db init ``
