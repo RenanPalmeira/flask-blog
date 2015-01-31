@@ -5,7 +5,7 @@ import markdown
 from flask import Blueprint, request, render_template, redirect, \
 				  url_for, session, render_template_string, Markup
 from core.db import db
-from core.models import User, Blog, Post, Tag
+from core.models import Contrib, Blog, Post, Tag
 
 app = Blueprint('admin', __name__, url_prefix='/admin')
 
