@@ -12,10 +12,9 @@ class Blog(db.Model):
 	logo = db.Column(db.String(255), default = None, nullable = True)
 	website = db.Column(db.String(255))
 	about = db.Column(db.String(255))
-	create_date = db.Column(db.DateTime, default=datetime.date.today())
-	update_date = db.Column(db.DateTime, default=datetime.date.today())
+	create_date = db.Column(db.DateTime, default=datetime.datetime.now())
+	update_date = db.Column(db.DateTime, default=datetime.datetime.now())
 
-	user_id = db.Column(db.Integer, db.ForeignKey('user.id_user'))
 	status = db.Column(db.Boolean, default=True)	
 
 	_tablename_='blog'
