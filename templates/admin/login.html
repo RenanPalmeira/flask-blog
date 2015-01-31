@@ -1,0 +1,27 @@
+{% extends "base/layout_admin.html" %}
+{% block content %}
+	<div class="login">
+		<form action="/login/" method="post">
+			<h1>
+				Welcome to Flask-Blog 
+			</h1>
+			<div class="form-input">
+				<p>Blog title</p>
+				<input type="text" name="title"/>
+			</div>
+			<div class="form-input">
+				<p>Author name</p>
+				<input type="text" name="name"/>
+			</div>
+			<div class="form-input">
+				<p>Email Address</p>
+				<input type="text" name="email"/>
+			</div>
+			<div class="form-input">
+				<p>Password</p>
+				<input type="password" name="password"/>		
+			</div>
+			<input type="button" class="btn" />
+		</form>
+	</div>
+{% endblock %}

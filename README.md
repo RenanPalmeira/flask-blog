@@ -9,16 +9,17 @@ Modules & *FrameWork's*:
 # Getting Started 
 
 1. `` python manage_flask.py db init ``
-2. `` python manage_flask.py db init ``
-3. `` python start.py ``
-4. `` python server.py ``
-5. Open in your browser http://0.0.0.0:4242/
+2. `` python manage_flask.py db migrate ``
+3. `` python manage_flask.py db upgrade ``
+4. `` python start.py ``
+5. `` python server.py ``
+6. Open in your browser http://0.0.0.0:4242/
 
 # Read more
 
 * http://flask.pocoo.org/
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-* 
+
 
 Obs: if you need a modules or framework's, run in terminal `` pip install -r requirements.txt ``
 

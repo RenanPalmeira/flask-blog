@@ -7,7 +7,7 @@ from core.models import Blog
 db = SQLAlchemy(app)
 
 b=Blog(
-	author= 'flask-blog',
+	author = 'flask-blog',
 	title = 'Flask-Blog',
 	description = 'your blog in Python Flask' ,
 	logo = None,

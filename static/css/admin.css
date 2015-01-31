@@ -3,6 +3,47 @@
 }
 body{
 	font: 14px/1.65 "Open Sans", sans-serif;
+	background: #242628;
+}
+.login{
+	color: #7d878a;
+	background-color: #18191b;
+	width: 460px;
+	height: 90%;
+	margin: 0 auto;
+	margin-top: 1%;
+	border-radius: 3px;
+	padding-top: 35px;
+}
+.login .form-input{
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	text-align: center;
+}
+.login h1{
+	margin: 0;
+	text-align: center;
+	font-weight: 200;
+	font-size: 26px;
+	letter-spacing: 0;
+	color: #e2edf2;
+	padding-bottom: 40px;
+}
+.login .form-input p{
+	width: auto;
+	text-align: left;
+	padding: 7px;
+	height: 0px;
+	color: #8C9296;
+}
+.login input[type="text"]{
+	width: 75%;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	background: #3c4043;
+	transition: background 0.25s ease;
 }
 .nav-ground{
 	position: relative;
