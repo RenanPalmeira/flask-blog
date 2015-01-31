@@ -3,8 +3,8 @@
 import datetime
 from core.db import db
 
-class User(db.Model):
-	id_user = db.Column(db.Integer, primary_key = True)
+class Contrib(db.Model):
+	id_contrib = db.Column(db.Integer, primary_key = True)
 	email = db.Column(db.String(120), unique = True)
 	name = db.Column(db.String(80))
 	password = db.Column(db.String(255))
@@ -16,4 +16,4 @@ class User(db.Model):
 
 	status = db.Column(db.Boolean, default=True)	
 
-	_tablename_='user'
+	_tablename_='contrib'
