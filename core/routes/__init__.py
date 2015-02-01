@@ -4,9 +4,10 @@ import datetime
 from flask import Blueprint, request, render_template, redirect, \
 				  url_for, session, render_template_string, Markup
 from core.db import db
-from core.models import Contrib, Blog, Tag
+from core.models import *
 
 def session_info_blog():
+	request.url_root=request.url_root.replare('localhost','0.0.0.0')
 	response=Blog.query.filter_by(website=request.url_root,status=1).first()
 	tabs=list()
 	tags=Tag.query.filter_by(status=1).all()
