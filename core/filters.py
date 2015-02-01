@@ -1,7 +1,9 @@
 # -*- coding: utf8 -*-
 import datetime
+from flaskext.markdown import Markdown
 
 def Filters(app):
+    m=Markdown(app)
     @app.template_filter('strftime')
     def _jinja2_filter_datetime(date):
         if type(date) is datetime.datetime:

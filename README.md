@@ -4,6 +4,7 @@ Modules & *FrameWork's*:
 * Flask
 * Flask-Migrate
 * Flask-SQLAlchemy
+* Flask-Markdown
 * Markdown
 
 # Getting Started 
@@ -19,7 +20,7 @@ Modules & *FrameWork's*:
 
 * http://flask.pocoo.org/
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-
+* https://pythonhosted.org/Flask-Markdown/
 
 Obs: if you need a modules or framework's, run in terminal `` pip install -r requirements.txt ``
 
