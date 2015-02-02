@@ -5,6 +5,7 @@ Modules & *FrameWork's*:
 * Flask-Migrate
 * Flask-SQLAlchemy
 * Flask-Markdown
+* MongoKit
 * Markdown
 
 DataBase's:
@@ -25,7 +26,7 @@ DataBase's:
 * http://flask.pocoo.org/
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 * https://pythonhosted.org/Flask-Markdown/
-
+* http://flask.pocoo.org/docs/0.10/patterns/mongokit/
 Obs: if you need a modules or framework's, run in terminal `` pip install -r requirements.txt ``
 
 Note: if you want to run in Windows, see it http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/
