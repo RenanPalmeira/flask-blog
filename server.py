@@ -1,19 +1,20 @@
 # -*- coding: utf8 -*-
 
 from flask import Flask, render_template
-from core.db import db
-from core.routes import default, post, admin
+from core.db import db, MongoDB_Connection
+from core.routes import Routes
 from core.filters import Filters
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/dev.db'
-db.init_app(app)
-Filters(app)
+app.config['MONGODB_HOST'] = 'localhost'
+app.config['MONGODB_PORT'] = 27017
 
-app.register_blueprint(default.app)
-app.register_blueprint(post.app)
-app.register_blueprint(admin.app)
+db.init_app(app)
+connection=MongoDB_Connection(app)
+f=Filters(app)
+r=Routes(app)
 
 if __name__ == "__main__":
 	app.debug = True

@@ -7,6 +7,10 @@ Modules & *FrameWork's*:
 * Flask-Markdown
 * Markdown
 
+DataBase's:
+* SQLite (User, Post, Configuration of Blog and Category)
+* MongoDB (Comments)
+
 # Getting Started 
 
 1. `` python manage_flask.py db init ``

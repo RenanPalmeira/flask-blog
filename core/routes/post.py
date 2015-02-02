@@ -5,7 +5,7 @@ import markdown
 from flask import Blueprint, request, render_template, redirect, \
 				  url_for, session, render_template_string, Markup
 from core.db import db
-from ..routes import *
+from routes import Routes
 
 app = Blueprint('post', __name__, url_prefix='/post')
 
@@ -17,5 +17,5 @@ def post():
 		'title':'Welcome to flask-blog',
 		'content':content,
 	}
-	blog=session_info_blog()
+	blog=Routes.session_blog()
 	return render_template('post.html', **locals())

@@ -11,3 +11,5 @@ MarkupSafe==0.23
 SQLAlchemy==0.9.8
 Werkzeug==0.9.6
 Markdown==2.5.2
+pymongo==2.7.2
+mongokit==0.9.1.1
