@@ -14,4 +14,10 @@ def MongoDB_Connection(app):
 		connection=False
 	return connection
 
+def MongoDB_Models():
+	from models import Comment
+	if connection:
+		return connection.register([Comment])
+
+
 db = SQLAlchemy()

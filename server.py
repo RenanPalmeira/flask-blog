@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 
 from flask import Flask, render_template
-from core.db import db, MongoDB_Connection
+from core.db import db, MongoDB_Connection, MongoDB_Models
 from core.routes import Routes
 from core.filters import Filters
 
@@ -17,6 +17,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/dev.db'
 
 db.init_app(app)
 connection=MongoDB_Connection(app)
+m=MongoDB_Models()
 f=Filters(app)
 r=Routes(app)
 
