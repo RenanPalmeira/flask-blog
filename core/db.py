@@ -6,8 +6,8 @@ def MongoDB_Connection(app):
 	global connection
 	if not 'config' in dir(app):
 		connection=False
-	if 'MONGODB_URI' in app.config:
-		connection=MongoClient(app.config['MONGODB_URI'])
+	if 'MONGODB_URL' in app.config:
+		connection=MongoClient(app.config['MONGODB_URL'])
 	elif 'MONGODB_HOST' and 'MONGODB_PORT' in app.config:
 		connection=Connection(app.config['MONGODB_HOST'], app.config['MONGODB_PORT'])
 	else:

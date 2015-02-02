@@ -8,8 +8,12 @@ from core.filters import Filters
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/dev.db'
-app.config['MONGODB_HOST'] = 'localhost'
-app.config['MONGODB_PORT'] = 27017
+# if you  use mongoDB, remove '#' the 2 lines in bottom
+
+#app.config['MONGODB_HOST'] = 'localhost'
+#app.config['MONGODB_PORT'] = 27017
+
+# if you need a mongoDB url, just set app.config['MONGODB_URL']
 
 db.init_app(app)
 connection=MongoDB_Connection(app)
