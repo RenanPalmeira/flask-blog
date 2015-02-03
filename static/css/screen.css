@@ -1,27 +1,3 @@
-/* ==========================================================================
-   Table of Contents
-   ========================================================================== */
-
-/*
-
-    0.  Normalize
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Tag Archive
-    7.  Third Party Elements
-    8.  Pagination
-    9.  Footer
-    10. Media Queries (Tablet)
-    11. Media Queries (Mobile)
-*/
-
-/* ==========================================================================
-   0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
-   ========================================================================== */
-
 article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
@@ -47,6 +23,10 @@ hr {
    -moz-box-sizing: content-box;
    box-sizing: content-box;
    height: 0;
+}
+p{
+    font-family:verdana;
+    color:#414141;
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
@@ -599,7 +579,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 38px;
     padding: 0 20px;
     border: transparent 1px solid;
-    color: #9EABB3;
+    color: #ffffff;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -612,6 +592,7 @@ margin on the iframe, cause it breaks stuff. */
 .subscribe-button:before {
     font-size: 9px;
     margin-right: 6px;
+    color: #ffffff;
 }
 
 /* Special styles when overlaid on an image*/
@@ -634,7 +615,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-nav.overlay a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .main-nav.overlay .back-button,
@@ -643,9 +624,9 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-nav.overlay a:hover {
-    color: #222;
+    color: #ffffff;
     border-color: #fff;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.31);
     transition: all 0.1s ease;
 }
 
@@ -653,7 +634,7 @@ margin on the iframe, cause it breaks stuff. */
 .back-button:hover,
 .subscribe-button:hover {
     border-color: #bfc8cd;
-    color: #9EABB3;
+    color: #000000;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -663,7 +644,7 @@ margin on the iframe, cause it breaks stuff. */
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    color: #fff;
+    color: #ffffff;
 }
 
 .page-description {
@@ -671,7 +652,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: verdana, serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -692,10 +673,9 @@ margin on the iframe, cause it breaks stuff. */
 
 .no-cover .main-nav.overlay .back-button,
 .no-cover .main-nav.overlay .subscribe-button {
-    color: rgba(0,0,0,0.4);
-    border-color: rgba(0,0,0,0.3);
+    color: #ffffff;
+    border-color: #ffffff;
 }
-
 /* Add subtle load-in animation for content on the home page */
 .home-template .page-title {
     -webkit-animation: fade-in-down 0.6s;
@@ -1198,6 +1178,7 @@ body:not(.post-template) .post-title {
 /* Pastebin */
 .content .embedPastebin {
     margin-bottom: 1.75em;
+    background:#000;
 }
 
 /* ==========================================================================
@@ -1313,12 +1294,6 @@ body:not(.post-template) .post-title {
     color: #50585D;
 }
 
-.poweredby {
-    display: block;
-    width: 45%;
-    float: right;
-    text-align: right;
-}
 
 .copyright {
     display: block;
@@ -1491,13 +1466,13 @@ body:not(.post-template) .post-title {
         height: 44px;
         line-height: 41px;
         border-radius: 0;
-        color: #2e2e2e;
+        color: #000000;
         background: transparent;
     }
     .back-button:hover,
     .subscribe-button:hover {
         border-color: #ebeef0;
-        color: #2e2e2e;
+        color: #000000;
         background: #ebeef0;
     }
 
