@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 
 from flask import Flask, render_template
+from wtforms.meta import DefaultMeta
 from core.db import db, MongoDB_Connection, MongoDB_Models
 from core.routes import Routes
 from core.filters import Filters
@@ -14,6 +15,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/dev.db'
 #app.config['MONGODB_PORT'] = 27017
 
 # if you need a mongoDB url, just set app.config['MONGODB_URL']
+
+DefaultMeta.locales = ('pt_BR', 'pt')
 
 db.init_app(app)
 connection=MongoDB_Connection(app)

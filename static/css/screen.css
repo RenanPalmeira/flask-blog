@@ -24,10 +24,6 @@ hr {
    box-sizing: content-box;
    height: 0;
 }
-p{
-    font-family:verdana;
-    color:#414141;
-}
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
 samp { font-family: monospace, serif; font-size: 1em; }
@@ -579,7 +575,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 38px;
     padding: 0 20px;
     border: transparent 1px solid;
-    color: #ffffff;
+    color: #9EABB3;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -652,7 +648,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: verdana, serif;
+    font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }

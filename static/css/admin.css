@@ -6,7 +6,7 @@
 	overflow: hidden;
 }
 .login{
-	width: 460px;
+	width: 400px;
 	height: auto;
 	background-color: #ffffff;
 	margin: 0 auto;
@@ -19,7 +19,6 @@
 .login .form-input{
 	width: 100%;
 	height: auto;
-	padding: 5px;
 	text-align: left;
 }
 .login .form-input.breakspace{
@@ -53,8 +52,7 @@
 	background: #3c4043;
 	transition: background 0.25s ease;
 }
-.login input[type="button"]{
-	font-family: 'Open Sans', sans-serif;
+.login input[type="submit"]{
 	font-weight: bold;
 	width: 99%;
 	border: none;
@@ -62,6 +60,9 @@
 	border-radius: 4px;
 	color: #fff;
 	background: #6E0DA6;
+	color: #fff;
+	background-color: #2f8cde;
+	border-color: #207ac9;
 	transition: background 0.25s ease;
 }
 .nav-ground{

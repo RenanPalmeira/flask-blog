@@ -7,6 +7,8 @@ class Blog(db.Model):
 	id_blog = db.Column(db.Integer, primary_key = True)
 	author = db.Column(db.String(80))
 	title = db.Column(db.String(80))
+	email = db.Column(db.String(255), default = 'blog@flaskblog.com', unique = True) 
+	password = db.Column(db.String(255))
 	description = db.Column(db.String(255), default = None, nullable = True) 
 	logo = db.Column(db.String(255), default = None, nullable = True)
 	website = db.Column(db.String(255))

@@ -5,6 +5,7 @@ Modules & *FrameWork's*:
 * Flask-Migrate
 * Flask-SQLAlchemy
 * Flask-Markdown
+* Flask-WTF
 * MongoKit
 * Markdown
 

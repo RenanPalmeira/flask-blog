@@ -12,10 +12,14 @@ class Routes(object):
 		app.register_blueprint(default.app)
 		app.register_blueprint(post.app)
 		app.register_blueprint(admin.app)
-		
+	
+	@classmethod
+	def response_sql(self):
+		response=Blog.query.filter_by(website=request.url_root,status=1).first()
+		return response
 	@classmethod
 	def session_blog(self):
-		response=Blog.query.filter_by(website=request.url_root,status=1).first()
+		response=Routes.response_sql()
 		tabs=list()
 		tags=Tag.query.filter_by(status=1).all()
 		for tag in tags:

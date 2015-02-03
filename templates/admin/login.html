@@ -2,7 +2,7 @@
 {% block content %}
 	<body class="login-body">
 		<div class="login">
-			<form action="/login/" method="post">
+			<form action="/admin/login/" method="post" target="fjiojoisdjfidso">
 				<h1>
 					Welcome to Flask-Blog 
 				</h1>
@@ -12,7 +12,7 @@
 				</div>
 				<div class="form-input">
 					<p>Author name</p>
-					<input type="text" name="name"/>
+					<input type="text" name="author"/>
 				</div>
 				<div class="form-input">
 					<p>Email Address</p>
@@ -23,7 +23,7 @@
 					<input type="password" name="password"/>		
 				</div>
 				<div class="form-input breakspace">
-					<input type="button" value="Ok, Update this informations" />
+					<input type="submit" class="btn" value="Ok, Update this informations" />
 				</div>
 			</form>
 		</div>
