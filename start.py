@@ -17,6 +17,7 @@ b=Blog(
 	password = 'c4d8af46f455557f60e91fb716affa9f',
 	create_date = datetime.datetime.now(),
 	update_date = datetime.datetime.now(),
+	genre = 'tutorial',
 	status = 1,
 )
 
