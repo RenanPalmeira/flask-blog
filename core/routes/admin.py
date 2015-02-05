@@ -33,6 +33,7 @@ def login():
 		blog.email = email
 		blog.password = password
 		blog.update_date = datetime.datetime.now()
+		blog.genre = 'first blog'
 
 		db.session.commit()
 		

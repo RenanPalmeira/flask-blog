@@ -15,6 +15,8 @@ class Blog(db.Model):
 	about = db.Column(db.String(255))
 	create_date = db.Column(db.DateTime, default=datetime.datetime.now())
 	update_date = db.Column(db.DateTime, default=datetime.datetime.now())
+	
+	genre = db.Column(db.String(255))
 
 	status = db.Column(db.Boolean, default=True)	
 
