@@ -2,10 +2,18 @@
 {% block content %}
 	<body class="login-body">
 		<div class="login">
-			<form action="/admin/login/" method="post" target="fjiojoisdjfidso">
+			<form action="/admin/new_login/" method="post" target="fjiojoisdjfidso">
 				<h1>
-					Login in Flask-Blog 
+					Welcome to Flask-Blog 
 				</h1>
+				<div class="form-input">
+					<p>Blog title</p>
+					<input type="text" name="title"/>
+				</div>
+				<div class="form-input">
+					<p>Author name</p>
+					<input type="text" name="author"/>
+				</div>
 				<div class="form-input">
 					<p>Email Address</p>
 					<input type="text" name="email"/>
@@ -14,17 +22,8 @@
 					<p>Password</p>
 					<input type="password" name="password"/>		
 				</div>
-				{% with messages = get_flashed_messages() %}
-				  {% if messages %}
-				    <ul class=flashes>
-				    {% for message in messages %}
-				      <li>{{ message }}</li>
-				    {% endfor %}
-				    </ul>
-				  {% endif %}
-				{% endwith %}
 				<div class="form-input breakspace">
-					<input type="submit" class="btn" value="Login" />
+					<input type="submit" class="btn" value="Ok, Update this informations" />
 				</div>
 			</form>
 		</div>

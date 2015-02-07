@@ -34,6 +34,7 @@ class Routes(object):
 			"about":response.about,
 			"tab":tabs,
 			"url":request.url_root,
+			"genre":response.genre,
 		}
 		session['blog']=session_response
 		return session['blog']

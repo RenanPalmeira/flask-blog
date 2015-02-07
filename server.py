@@ -27,4 +27,4 @@ r=Routes(app)
 if __name__ == "__main__":
 	app.debug = True
 	app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-	app.run(host='0.0.0.0', port=4242)
+	app.run(host='localhost', port=4242)
