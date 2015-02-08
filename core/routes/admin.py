@@ -16,10 +16,10 @@ app = Blueprint('admin', __name__, url_prefix='/admin')
 def default():
 	response = Routes.session_blog()
 	post = Post.query.filter_by(blog_id=response['id_blog'], status=1).all()
-	if response['genre']=='tutorial':
+	if response['genre'] == 'tutorial':
 		return render_template("admin/new_login_form.html", blog=response, posts=post)
 	elif 'author' in session:
-		return render_template_string("Its Worked")
+		return render_template("admin/panel.html", blog=response)
 	return render_template("admin/login.html", blog=response, posts=post)
 
 @app.route("/new_login/", methods=['POST'])
