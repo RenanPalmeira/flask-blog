@@ -20,7 +20,7 @@ DataBase's:
 3. `` python manage_flask.py db upgrade ``
 4. `` python start.py ``
 5. `` python server.py ``
-6. Open in your browser http://0.0.0.0:4242/
+6. Open in your browser http://localhost:4242/
 
 # Read more
 
