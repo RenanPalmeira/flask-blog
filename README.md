@@ -28,6 +28,8 @@ DataBase's:
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 * https://pythonhosted.org/Flask-Markdown/
 * http://flask.pocoo.org/docs/0.10/patterns/mongokit/
+* http://www.graphenedb.com/
+* https://mongolab.com/
 
 Obs: if you need a modules or framework's, run in terminal `` pip install -r requirements.txt ``
 
