@@ -5,12 +5,26 @@
 			<div class="nav">
 				<ul>
 					<li>Home</li>
-					<li>Novo Post</li>
+					<li><a href="{{blog.url}}admin/new">Novo Post</a></li>
 					<li>Configurações</li>
 				</ul>
 			</div>
-			<div class="list-post-all"></div>
-			<div class="list-post-content"></div>
 		</div>
+		{% block admin %}
+		<div class="posts">
+			<div class="list-post-all">
+				<p>Todos os Posts</p>
+				{% if posts %}
+					{% for item_post in posts %}	
+						<div class="item-post" onclick="ajax('list-post-content','{{blog.url}}admin/{{item_post.id_post}}');">
+							<h2>{{item_post.title}}</h2>
+							<span>{{item_post.create_date|strftime}}</span>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+			<div class="list-post-content" id="list-post-content"></div>
+		</div>
+		{% endblock %}
 	</body>
 {% endblock %}

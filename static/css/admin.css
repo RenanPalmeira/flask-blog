@@ -87,6 +87,131 @@
 	border-radius: 5px;
 	text-align: center;
 }
+.nav ul li a{
+	text-decoration: none;
+	color: #ffffff;
+}
 .nav ul li:hover{
 	background-color: #000000;
+}
+.posts{
+	display: table;
+	width: 100%;
+	height: 91.2%;
+}
+.editor{
+	width:100%;
+	color: #4A4A4A;
+	font-family: "Open Sans", sans-serif;
+}
+.editor .title{
+	padding: 20px;
+	width: 97%;
+	height: 30px;
+	border-bottom: #edece4 1px solid;
+}
+.editor .title input{
+	color: #4A4A4A;
+	width: 100%;
+	height: 30px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 2.2rem;
+	font-weight: bold;
+	letter-spacing: -1px;
+	background: transparent;
+}
+.editor .markdown{
+	padding:20px;
+
+}
+.editor .markdown textarea{
+	resize: none;
+	width: 100%;
+	height: 390px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 1.9rem;
+	line-height: 1.56em;
+	font-weight: normal;
+	font-family: monospace;
+	color: #3c4043;
+	background: transparent;	
+}
+.editor .label{
+	width: 99%;
+	padding-left: 10px;
+	color: #aaa9a2;
+	font-size: 12px;
+	border-bottom: #edece4 1px solid;
+}
+.editor .footer{
+	position: absolute;
+	background-color: #1A1C1D;
+	width: 100%;
+	height: 40px;
+	right: 0px;
+	bottom: 0px;
+
+}
+.editor .footer input[type="text"]{
+	width: 90%;
+	padding: 8px;
+	background: transparent;
+	border: 0px;
+	color: #ffffff;
+}
+.editor .footer input[type="submit"]{
+	padding: 8px;
+	color: #fff;
+	background-color: #5BA4E5;
+	border-color: #4598e2;
+	border: 0px;
+	color: #ffffff;
+}
+.list-post-all{
+	float: left;
+	height: 100%;
+	width: 480px;
+	border-right: #edece4 1px solid;
+}
+.list-post-all p{
+	width: 94%;
+	padding: 10px;
+	padding-left: 20px;
+	font-size: 12px;
+	border-bottom: #edece4 1px solid;
+	margin: 0px;
+}
+.list-post-all .item-post{
+	cursor: pointer;
+	padding: 20px 20px;
+	border-bottom: #ffffff 1px solid;
+}
+.list-post-all .item-post:hover{
+	background: #f7f7f3;
+	border-bottom: #edece4 1px solid;
+	box-shadow: #e8eaeb 0 -1px 0, rgba(0, 0, 0, 0.06) 7px 0 0 inset, #e8eaeb 1px 0 0 inset;
+}
+.list-post-all .item-post h2{
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+.list-post-all .item-post span{
+	color: rgba(0, 0, 0, 0.5);
+}
+.list-post-content{
+	float: right;
+	width: 64%;
+	height: 100%;
+	max-height: 800px;
+	overflow: auto;
+}
+input:focus{
+	outline: 0;
+}
+textarea:focus{
+	outline: 0;
 }

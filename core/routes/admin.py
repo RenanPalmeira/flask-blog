@@ -7,7 +7,7 @@ from flask import Blueprint, request, render_template, redirect, \
 				  url_for, session, render_template_string, Markup, flash
 from core.db import db
 from core.models import Author, Blog, Post, Tag
-from core.forms import BlogForm, AuthorForm
+from core.forms import BlogForm, AuthorForm, PostForm
 from routes import Routes
 
 app = Blueprint('admin', __name__, url_prefix='/admin')
@@ -15,12 +15,12 @@ app = Blueprint('admin', __name__, url_prefix='/admin')
 @app.route("/")
 def default():
 	response = Routes.session_blog()
-	post = Post.query.filter_by(blog_id=response['id_blog'], status=1).all()
+	post = Post.query.filter_by(blog_id=response['id_blog'], status=1).order_by(Post.id_post.desc()).all()
 	if response['genre'] == 'tutorial':
-		return render_template("admin/new_login_form.html", blog=response, posts=post)
+		return render_template("admin/new_login_form.html", blog=response)
 	elif 'author' in session:
-		return render_template("admin/panel.html", blog=response)
-	return render_template("admin/login.html", blog=response, posts=post)
+		return render_template("admin/panel.html", blog=response, posts=post)
+	return render_template("admin/login.html", blog=response)
 
 @app.route("/new_login/", methods=['POST'])
 def new_login():
