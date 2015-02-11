@@ -3,7 +3,7 @@
 {% block content %}
 
 <header class="main-header post-head  no-cover" style="background-image: no-cover">
-    <nav class="main-nav overlay clearfix">
+    <nav class="main-nav clearfix">
         <a class="back-button icon-arrow-left" href="{{blog.url}}">Home</a>
         <a class="subscribe-button icon-feed" href="{{blog.url}}/rss/">Subscribe</a>
     </nav>
@@ -38,7 +38,7 @@
                 {% if bio %}
                     <p>{{bio}}</p>
                 {% else %}
-                    <p>Read <a href="{{url}}">more posts</a> by this {{blog.author}}.</p>
+                    <p>Author: {{blog.author}}.</p>
                 {% endif %}
                 <div class="author-meta">
                 <!--
@@ -48,11 +48,6 @@
             </section>
 
         
-
-            <section class="share">
-                <h4>Share this post</h4>
-                
-            </section>
 
         </footer>
 

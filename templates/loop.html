@@ -5,10 +5,10 @@
     {% for post in posts %}
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+                <h2 class="post-title"><a href="{{blog.url}}{{post.id_post}}">{{post.title}}</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>{{post.content}} <a class="read-more" href="{{post.url}}">&raquo;</a></p>
+                <p>{% filter markdown %}{{post.content}}{% endfilter %} <a class="read-more" href="{{post.url}}">&raquo;</a></p>
             </section>
 
             <footer class="post-meta">
