@@ -1,0 +1,21 @@
+{% extends "admin/panel.html" %}
+{% block admin %}
+	<form action="{{blog.url}}admin/edit_save/{{post.id_post}}" method="POST">
+		<div class="editor">
+			<div class="title">
+				<input type="text" name="title" value="{{post.title}}"/>
+			</div>
+			<div class="label">Markdown</div>
+			<div class="markdown">
+				<textarea id="markdown" name="content">{{post.content}}</textarea>
+			</div>
+			<div class="footer">
+				<input type="text" name="tag"/>
+				<input type="submit" value="Alterar" />
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		document.getElementById('markdown').focus();
+	</script>
+{% endblock %}

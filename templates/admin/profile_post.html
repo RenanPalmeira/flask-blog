@@ -1,4 +1,7 @@
 {% if post %}
+	<a class="btn-edit" href="{{blog.url}}admin/edit/{{post.id_post}}">
+		Editar
+	</a>
 	{{post.title}}
 	<br/>
 	{{post.content}}

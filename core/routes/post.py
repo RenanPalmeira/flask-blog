@@ -13,13 +13,23 @@ from admin import app
 
 @app.route("/<int:id_post>")
 def profile_post(id_post):
-	response = Routes.session_blog()
-	post = Post.query.filter_by(id_post=id_post, blog_id=response['id_blog'], status=1)
+	blog = Routes.session_blog()
+	post = Post.query.filter_by(id_post=id_post, blog_id=blog['id_blog'], status=1)
 	if post.count()==1:
 		post=post.first()
 		post.content = Markup(markdown.markdown(post.content))
-		return render_template("admin/profile_post.html", blog=response, post=post)
+		return render_template("admin/profile_post.html", **locals())
 	return redirect(url_for('admin.default'))
+
+@app.route("/edit/<int:id_post>")
+def edit_post(id_post):
+	blog = Routes.session_blog()
+	post = Post.query.filter_by(id_post=id_post, blog_id=blog['id_blog'], status=1)
+	if post.count()==1:
+		post=post.first()
+		return render_template("admin/edit_post.html", **locals())
+	return redirect(url_for('admin.default'))
+
 
 @app.route("/new/")
 def new_post():
@@ -44,4 +54,17 @@ def save_post():
 		
 		db.session.add(p)
 		db.session.commit()	
+	return redirect(url_for('admin.default'))
+
+@app.route("/edit_save/<int:id_post>", methods=['POST'])
+def edit_save_post(id_post):
+	form=PostForm(request.form)
+	if request.method=='POST' and form.validate():
+		blog = Routes.response_sql()
+		title = form.title.data
+		content = form.content.data
+		p=Post.query.filter_by(id_post=id_post, status=1)
+		if p.count()==1:
+			p.update(dict(title=title, content=content))
+			db.session.commit()	
 	return redirect(url_for('admin.default'))
