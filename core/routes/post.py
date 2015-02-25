@@ -51,7 +51,29 @@ def save_post():
 			update_date = datetime.datetime.now(),
 			status = 1,
 		)
-		
+		if 'tag' in request.form.keys() and request.form['tag']!='':
+			tag_post=request.form['tag'].split()						
+			tag_list=list()
+			for tag in tag_post:
+				tag_query=Tag.query.filter_by(name=tag_post)
+				if tag_query.count()==1:
+					id_tag=tag_query.first().id_tag
+				else:	
+					tag_model=Tag(
+						name = tag,
+						create_date = datetime.datetime.now(),
+						update_date = datetime.datetime.now(),
+						status = 1,
+					)
+					tag_list+=[tag_model]
+			if len(tag_list)>0:
+				db.session.add_all(tag_list)
+				db.session.commit()	
+				id_tag=db.session.query(Tag).order_by(Tag.id_tag.desc()).first().id_tag
+				
+
+			p.tag_id=id_tag
+
 		db.session.add(p)
 		db.session.commit()	
 	return redirect(url_for('admin.default'))

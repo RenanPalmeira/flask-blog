@@ -14,6 +14,9 @@ app = Blueprint('admin', __name__, url_prefix='/admin')
 
 @app.route("/")
 def default():
+	for t in Tag.query.all():
+		print t.name
+
 	response = Routes.session_blog()
 	post = Post.query.filter_by(blog_id=response['id_blog'], status=1).order_by(Post.id_post.desc()).all()
 	if response['genre'] == 'tutorial':

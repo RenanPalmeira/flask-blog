@@ -175,6 +175,8 @@
 	float: left;
 	height: 100%;
 	width: 480px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	border-right: #edece4 1px solid;
 }
 .list-post-all p{
@@ -209,6 +211,9 @@
 	height: 100%;
 	max-height: 800px;
 	overflow: auto;
+}
+.list-post-content img{
+	max-width: 800px;
 }
 input:focus{
 	outline: 0;
