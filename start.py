@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 import datetime
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from server import app
 from core.models import Blog
 
@@ -26,5 +26,5 @@ if __name__=='__main__':
 		db.session.add(b)
 		db.session.commit()
 	except:
-		print "Run this file.py only once"
+		print("Run this file.py only once")
     	

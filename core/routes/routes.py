@@ -8,7 +8,7 @@ from core.models import *
 
 class Routes(object):
 	def __init__(self, app):
-		import default, post, admin
+		from . import default, post, admin
 		app.register_blueprint(default.app)
 		app.register_blueprint(post.app)
 		app.register_blueprint(admin.app)

@@ -8,8 +8,8 @@ from flask import Blueprint, request, render_template, redirect, \
 from core.db import db
 from core.models import Author, Blog, Post, Tag
 from core.forms import BlogForm, AuthorForm, PostForm
-from routes import Routes
-from admin import app
+from .routes import Routes
+from .admin import app
 
 @app.route("/<int:id_post>")
 def profile_post(id_post):

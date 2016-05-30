@@ -1,3 +1,3 @@
-from PostForm import PostForm
-from BlogForm import BlogForm
-from AuthorForm import AuthorForm
+from .PostForm import PostForm
+from .BlogForm import BlogForm
+from .AuthorForm import AuthorForm
